@@ -1,0 +1,308 @@
+======================================================================
+HOSPITAL APPOINTMENT OPERATIONS ANALYSIS
+======================================================================
+
+TASK 1: LOAD AND INSPECT DATASET
+----------------------------------------------------------------------
+
+First 5 Records:
+  Appointment_ID Appointment_Date   Department  ...  Waiting_Time_Minutes SMS_Reminder  Consultation_Fee
+0        APT0001       2026-03-19          ENT  ...                  35.0          Yes               700
+1        APT0002       2026-03-16          ENT  ...                   NaN          Yes               450
+2        APT0003       2026-01-26          ENT  ...                  15.0          Yes               700
+3        APT0004       2026-03-24  Dermatology  ...                   NaN           No               750
+4        APT0005       2026-02-12   Pediatrics  ...                  28.0           No               550
+
+[5 rows x 8 columns]
+
+Dataset Shape:
+(100, 8)
+
+Column Names:
+['Appointment_ID', 'Appointment_Date', 'Department', 'Appointment_Type', 'Attendance_Status', 'Waiting_Time_Minutes', 'SMS_Reminder', 'Consultation_Fee']
+
+Dataset Information:
+<class 'pandas.DataFrame'>
+RangeIndex: 100 entries, 0 to 99
+Data columns (total 8 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   Appointment_ID        100 non-null    str    
+ 1   Appointment_Date      100 non-null    str    
+ 2   Department            100 non-null    str    
+ 3   Appointment_Type      100 non-null    str    
+ 4   Attendance_Status     100 non-null    str    
+ 5   Waiting_Time_Minutes  71 non-null     float64
+ 6   SMS_Reminder          100 non-null    str    
+ 7   Consultation_Fee      100 non-null    int64  
+dtypes: float64(1), int64(1), str(6)
+memory usage: 6.4 KB
+
+Statistical Description:
+       Appointment_ID Appointment_Date   Department  ...  Waiting_Time_Minutes SMS_Reminder  Consultation_Fee
+count             100              100          100  ...             71.000000          100        100.000000
+unique             99               58            6  ...                   NaN            2               NaN
+top           APT0099       2026-01-11  Dermatology  ...                   NaN          Yes               NaN
+freq                2                5           22  ...                   NaN           70               NaN
+mean              NaN              NaN          NaN  ...             22.211268          NaN        635.000000
+std               NaN              NaN          NaN  ...             11.461632          NaN        184.842275
+min               NaN              NaN          NaN  ...              3.000000          NaN        300.000000
+25%               NaN              NaN          NaN  ...             15.000000          NaN        500.000000
+50%               NaN              NaN          NaN  ...             22.000000          NaN        625.000000
+75%               NaN              NaN          NaN  ...             30.500000          NaN        700.000000
+max               NaN              NaN          NaN  ...             58.000000          NaN       1050.000000
+
+[11 rows x 8 columns]
+
+
+TASK 2: HANDLE MISSING WAITING TIME VALUES
+----------------------------------------------------------------------
+Missing Waiting Time Values: 29
+Median Waiting Time: 22.0
+Missing Values After Handling: 0
+
+
+TASK 3: CHECK DUPLICATE APPOINTMENT IDs
+----------------------------------------------------------------------
+Number of Duplicate Appointment IDs: 1
+
+Duplicate Records:
+   Appointment_ID Appointment_Date        Department  ...  Waiting_Time_Minutes SMS_Reminder  Consultation_Fee
+98        APT0099       2026-01-17        Cardiology  ...                  22.0          Yes               950
+99        APT0099       2026-02-14  General Medicine  ...                  22.0          Yes               400
+
+[2 rows x 8 columns]
+
+Duplicate Records Removed.
+Records After Removing Duplicates: 99
+
+
+TASK 4: APPOINTMENT AND ATTENDANCE ANALYSIS
+----------------------------------------------------------------------
+Total Appointments: 99
+
+Attendance Summary:
+                   Count  Percentage
+Attendance_Status                   
+Attended              75       75.76
+No-show               15       15.15
+Cancelled              9        9.09
+
+
+TASK 5: AVERAGE WAITING TIME BY DEPARTMENT
+----------------------------------------------------------------------
+
+Average Waiting Time:
+Department
+General Medicine    26.65
+Cardiology          25.23
+Pediatrics          21.86
+Dermatology         21.73
+ENT                 19.54
+Orthopedics         18.70
+Name: Waiting_Time_Minutes, dtype: float64
+
+
+TASK 6: DEPARTMENT-WISE NO-SHOW ANALYSIS
+----------------------------------------------------------------------
+
+No-Show Percentage by Department:
+Department
+Pediatrics          28.57
+Orthopedics         20.00
+General Medicine    17.65
+Dermatology          9.09
+Cardiology           7.69
+ENT                  7.69
+Name: No_Show, dtype: float64
+
+Department with Highest No-Show Percentage: Pediatrics
+Highest No-Show Percentage: 28.57 %
+
+
+TASK 7: SMS REMINDER ANALYSIS
+----------------------------------------------------------------------
+
+SMS Reminder vs Attendance:
+Attendance_Status  Attended  Cancelled  No-show
+SMS_Reminder                                   
+No                       20          4        6
+Yes                      55          5        9
+
+Attendance Percentage by SMS Reminder:
+Attendance_Status  Attended  Cancelled  No-show
+SMS_Reminder                                   
+No                    66.67      13.33    20.00
+Yes                   79.71       7.25    13.04
+
+
+TASK 8: CONSULTATION FEE BY DEPARTMENT
+----------------------------------------------------------------------
+
+Department-wise Consultation Fee:
+                  Average_Fee  Total_Fee  Appointment_Count
+Department                                                 
+Cardiology             984.62      12800                 13
+Dermatology            636.36      14000                 22
+ENT                    603.85       7850                 13
+General Medicine       426.47       7250                 17
+Orthopedics            700.00      14000                 20
+Pediatrics             514.29       7200                 14
+
+
+TASK 9: APPOINTMENT VOLUME ANALYSIS
+----------------------------------------------------------------------
+
+Appointment Count by Date and Department:
+Department        Cardiology  Dermatology  ENT  General Medicine  Orthopedics  Pediatrics
+Appointment_Date                                                                         
+2026-01-02                 0            1    0                 0            1           0
+2026-01-03                 1            0    0                 0            0           0
+2026-01-04                 0            0    0                 0            1           0
+2026-01-06                 1            0    0                 1            0           0
+2026-01-07                 0            0    1                 0            0           1
+2026-01-11                 0            1    2                 1            1           0
+2026-01-13                 0            0    0                 0            0           1
+2026-01-17                 1            0    0                 1            1           0
+2026-01-18                 0            2    0                 0            0           0
+2026-01-19                 0            1    0                 1            0           0
+2026-01-20                 1            1    0                 1            1           0
+2026-01-21                 0            1    0                 1            0           0
+2026-01-22                 0            0    0                 0            0           1
+2026-01-24                 1            0    0                 0            0           0
+2026-01-25                 0            0    0                 1            1           0
+2026-01-26                 0            0    1                 0            1           0
+2026-01-27                 0            1    0                 1            0           0
+2026-01-29                 1            1    0                 0            0           0
+2026-01-30                 1            0    0                 0            1           0
+2026-01-31                 0            0    0                 1            1           0
+2026-02-02                 0            0    0                 1            0           1
+2026-02-03                 0            0    0                 1            0           0
+2026-02-04                 0            0    0                 1            0           1
+2026-02-06                 0            0    0                 0            1           0
+2026-02-07                 1            0    0                 0            0           0
+2026-02-09                 0            0    1                 0            0           0
+2026-02-10                 0            2    0                 0            1           1
+2026-02-12                 0            0    1                 0            0           1
+2026-02-13                 0            0    0                 1            0           0
+2026-02-14                 1            0    0                 0            0           1
+2026-02-17                 0            0    1                 0            1           0
+2026-02-18                 0            0    1                 1            0           0
+2026-02-19                 0            0    0                 0            1           0
+2026-02-20                 0            0    0                 0            1           0
+2026-02-22                 0            0    0                 1            0           0
+2026-02-23                 0            0    0                 0            1           0
+2026-02-24                 1            0    0                 0            0           0
+2026-02-26                 0            1    0                 1            0           0
+2026-02-27                 0            1    2                 0            0           0
+2026-02-28                 0            0    0                 0            1           0
+2026-03-01                 0            0    1                 0            0           0
+2026-03-02                 1            1    0                 1            0           0
+2026-03-04                 1            1    0                 0            0           0
+2026-03-05                 0            0    0                 0            1           0
+2026-03-06                 0            2    0                 0            0           0
+2026-03-08                 1            1    0                 0            0           0
+2026-03-09                 0            0    0                 0            0           1
+2026-03-10                 0            1    0                 0            0           0
+2026-03-12                 0            1    0                 0            0           0
+2026-03-14                 0            0    0                 0            0           1
+2026-03-16                 0            0    1                 0            0           0
+2026-03-19                 0            0    1                 0            0           1
+2026-03-22                 0            1    0                 0            0           0
+2026-03-24                 0            1    0                 0            1           0
+2026-03-25                 0            0    0                 0            1           0
+2026-03-27                 0            0    0                 0            1           1
+2026-03-28                 0            0    0                 0            0           1
+2026-03-29                 0            0    0                 0            0           1
+
+
+TASK 10: APPOINTMENT TYPE WAITING TIME ANALYSIS
+----------------------------------------------------------------------
+
+Waiting Time Comparison:
+                   mean  median  min   max
+Appointment_Type                          
+Follow-up         21.71    22.0  3.0  39.0
+New               22.89    22.0  3.0  58.0
+
+
+TASK 11: NUMPY STATISTICAL ANALYSIS
+----------------------------------------------------------------------
+Median Waiting Time: 22.0
+First Quartile (Q1): 17.5
+Second Quartile (Q2): 22.0
+Third Quartile (Q3): 28.0
+Standard Deviation: 9.64
+
+
+TASK 12: LONG WAITING TIME OUTLIER ANALYSIS
+----------------------------------------------------------------------
+Interquartile Range: 10.5
+Lower Limit: 1.75
+Upper Limit: 43.75
+
+Unusually Long Waiting Time Records:
+   Appointment_ID  Department  Waiting_Time_Minutes
+47        APT0048  Cardiology                  58.0
+
+Total Outlier Records: 1
+
+
+TASK 13: WAITING TIME CATEGORY ANALYSIS
+----------------------------------------------------------------------
+
+Waiting Time Categories:
+Waiting_Time_Category
+Short (0-15)        19
+Moderate (16-30)    62
+Long (31-60)        18
+Very Long (>60)      0
+Name: count, dtype: int64
+
+
+TASK 14: ATTENDED APPOINTMENT FEE ANALYSIS
+----------------------------------------------------------------------
+Total Attended Appointments: 75
+Estimated Total Consultation Fees: 48050
+Average Consultation Fee: 640.67
+
+Department-wise Attended Appointment Fees:
+                  count    sum    mean
+Department                            
+Cardiology           10   9950  995.00
+Dermatology          17  10750  632.35
+ENT                  11   6500  590.91
+General Medicine     11   4400  400.00
+Orthopedics          16  11000  687.50
+Pediatrics           10   5450  545.00
+
+
+TASK 15: OPERATIONAL RECOMMENDATIONS
+----------------------------------------------------------------------
+
+1. Appointment Scheduling
+   Review appointment schedules in departments with higher average waiting times.
+
+2. No-Show Reduction
+   Pay attention to departments with higher no-show percentages and review their appointment processes.
+
+3. SMS Reminders
+   Continue monitoring attendance for appointments with and without SMS reminders.
+
+4. Waiting Time Management
+   Review appointments with unusually long waiting times to identify possible scheduling delays.
+
+5. Fee Monitoring
+   Regularly review department-wise consultation fee records for better operational tracking.
+
+======================================================================
+PROJECT SUMMARY
+======================================================================
+Total Records Analysed: 99
+Total Departments: 6
+Total Attended Appointments: 75
+Total No-Show Appointments: 15
+Total Cancelled Appointments: 9
+
+All 15 Tasks Completed Successfully!
+======================================================================

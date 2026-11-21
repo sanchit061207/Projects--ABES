@@ -1,0 +1,101 @@
+Appointment_ID,Appointment_Date,Department,Appointment_Type,Attendance_Status,Waiting_Time_Minutes,SMS_Reminder,Consultation_Fee
+APT0001,2026-03-19,ENT,New,Attended,35.0,Yes,700
+APT0002,2026-03-16,ENT,New,Attended,,Yes,450
+APT0003,2026-01-26,ENT,Follow-up,Attended,15.0,Yes,700
+APT0004,2026-03-24,Dermatology,Follow-up,Cancelled,,No,750
+APT0005,2026-02-12,Pediatrics,Follow-up,Attended,28.0,No,550
+APT0006,2026-01-21,Dermatology,New,Attended,28.0,Yes,700
+APT0007,2026-01-29,Cardiology,Follow-up,Attended,16.0,No,1050
+APT0008,2026-03-02,General Medicine,Follow-up,Attended,35.0,Yes,500
+APT0009,2026-03-12,Dermatology,New,Attended,20.0,No,650
+APT0010,2026-01-02,Orthopedics,Follow-up,Attended,15.0,Yes,600
+APT0011,2026-02-24,Cardiology,New,Cancelled,,Yes,900
+APT0012,2026-02-26,Dermatology,Follow-up,No-show,,Yes,650
+APT0013,2026-02-28,Orthopedics,Follow-up,Attended,28.0,Yes,600
+APT0014,2026-01-30,Orthopedics,Follow-up,Attended,24.0,No,700
+APT0015,2026-01-29,Dermatology,Follow-up,Attended,8.0,Yes,750
+APT0016,2026-02-22,General Medicine,Follow-up,Attended,39.0,Yes,500
+APT0017,2026-02-20,Orthopedics,Follow-up,Attended,21.0,Yes,750
+APT0018,2026-03-27,Pediatrics,Follow-up,Attended,3.0,No,600
+APT0019,2026-02-19,Orthopedics,Follow-up,Attended,4.0,No,800
+APT0020,2026-03-14,Pediatrics,New,Attended,23.0,No,550
+APT0021,2026-01-20,Orthopedics,New,Attended,12.0,Yes,750
+APT0022,2026-01-13,Pediatrics,New,Attended,27.0,Yes,500
+APT0023,2026-02-06,Orthopedics,New,Attended,5.0,Yes,800
+APT0024,2026-02-18,ENT,New,Attended,15.0,No,450
+APT0025,2026-01-11,ENT,Follow-up,Attended,18.0,Yes,700
+APT0026,2026-01-11,ENT,New,Attended,16.0,Yes,550
+APT0027,2026-03-19,Pediatrics,Follow-up,Attended,23.0,Yes,550
+APT0028,2026-03-05,Orthopedics,Follow-up,Attended,28.0,Yes,800
+APT0029,2026-02-10,Orthopedics,Follow-up,No-show,,No,750
+APT0030,2026-01-27,Dermatology,New,Attended,33.0,Yes,600
+APT0031,2026-03-29,Pediatrics,New,Attended,18.0,No,500
+APT0032,2026-03-09,Pediatrics,Follow-up,Attended,33.0,Yes,400
+APT0033,2026-01-30,Cardiology,New,Attended,36.0,Yes,1000
+APT0034,2026-03-02,Dermatology,Follow-up,Attended,3.0,Yes,650
+APT0035,2026-02-10,Dermatology,Follow-up,Attended,11.0,Yes,700
+APT0036,2026-01-02,Dermatology,New,Attended,21.0,Yes,500
+APT0037,2026-02-09,ENT,New,Attended,16.0,No,650
+APT0038,2026-01-11,Orthopedics,Follow-up,Attended,3.0,No,700
+APT0039,2026-01-21,General Medicine,Follow-up,Attended,32.0,Yes,450
+APT0040,2026-01-18,Dermatology,Follow-up,Attended,33.0,Yes,650
+APT0041,2026-01-31,Orthopedics,New,No-show,,Yes,850
+APT0042,2026-01-18,Dermatology,Follow-up,Attended,18.0,Yes,650
+APT0043,2026-02-14,Cardiology,Follow-up,Attended,3.0,Yes,1050
+APT0044,2026-03-27,Orthopedics,Follow-up,Attended,11.0,Yes,700
+APT0045,2026-02-04,Pediatrics,Follow-up,Attended,,No,600
+APT0046,2026-01-11,General Medicine,Follow-up,Attended,29.0,Yes,300
+APT0047,2026-03-06,Dermatology,Follow-up,Attended,22.0,Yes,700
+APT0048,2026-02-07,Cardiology,New,Attended,58.0,Yes,1000
+APT0049,2026-02-02,Pediatrics,New,No-show,,Yes,400
+APT0050,2026-01-20,Dermatology,Follow-up,Cancelled,,No,500
+APT0051,2026-02-17,Orthopedics,New,Attended,3.0,Yes,600
+APT0052,2026-01-07,ENT,Follow-up,Attended,20.0,Yes,550
+APT0053,2026-03-08,Dermatology,Follow-up,Attended,39.0,Yes,500
+APT0054,2026-02-26,General Medicine,Follow-up,Cancelled,,Yes,400
+APT0055,2026-03-25,Orthopedics,Follow-up,Attended,26.0,No,700
+APT0056,2026-03-10,Dermatology,New,Attended,33.0,Yes,600
+APT0057,2026-01-31,General Medicine,New,No-show,,Yes,550
+APT0058,2026-03-04,Cardiology,New,Attended,30.0,Yes,950
+APT0059,2026-02-10,Pediatrics,Follow-up,No-show,,Yes,400
+APT0060,2026-03-24,Orthopedics,Follow-up,No-show,,No,700
+APT0061,2026-01-17,General Medicine,New,Attended,,Yes,450
+APT0062,2026-02-27,ENT,New,Attended,12.0,No,650
+APT0063,2026-01-06,Cardiology,Follow-up,Attended,25.0,Yes,800
+APT0064,2026-01-04,Orthopedics,Follow-up,Attended,16.0,No,600
+APT0065,2026-02-23,Orthopedics,New,Attended,36.0,Yes,600
+APT0066,2026-01-07,Pediatrics,Follow-up,No-show,,Yes,550
+APT0067,2026-03-08,Cardiology,Follow-up,Attended,8.0,Yes,1000
+APT0068,2026-02-18,General Medicine,New,No-show,,No,500
+APT0069,2026-03-04,Dermatology,New,Attended,23.0,Yes,500
+APT0070,2026-03-02,Cardiology,Follow-up,Attended,38.0,Yes,1000
+APT0071,2026-01-22,Pediatrics,Follow-up,No-show,,Yes,400
+APT0072,2026-01-27,General Medicine,New,Attended,16.0,No,300
+APT0073,2026-02-12,ENT,New,Attended,29.0,No,450
+APT0074,2026-01-19,Dermatology,New,No-show,,Yes,700
+APT0075,2026-02-27,Dermatology,Follow-up,Attended,6.0,Yes,750
+APT0076,2026-01-25,Orthopedics,New,Attended,17.0,Yes,600
+APT0077,2026-01-11,Dermatology,New,Attended,3.0,Yes,700
+APT0078,2026-03-01,ENT,Follow-up,No-show,,No,700
+APT0079,2026-01-03,Cardiology,Follow-up,Attended,22.0,Yes,1050
+APT0080,2026-02-03,General Medicine,Follow-up,Attended,37.0,No,300
+APT0081,2026-02-14,Pediatrics,Follow-up,Attended,22.0,Yes,600
+APT0082,2026-03-06,Dermatology,Follow-up,Attended,31.0,Yes,500
+APT0083,2026-02-02,General Medicine,Follow-up,No-show,,No,550
+APT0084,2026-01-24,Cardiology,Follow-up,Attended,26.0,Yes,1050
+APT0085,2026-02-10,Dermatology,New,Attended,36.0,No,650
+APT0086,2026-02-17,ENT,Follow-up,Cancelled,,No,650
+APT0087,2026-03-28,Pediatrics,Follow-up,Attended,19.0,Yes,600
+APT0088,2026-01-17,Orthopedics,Follow-up,No-show,,No,700
+APT0089,2026-02-04,General Medicine,Follow-up,Cancelled,,No,300
+APT0090,2026-01-20,General Medicine,Follow-up,Attended,23.0,Yes,300
+APT0091,2026-03-22,Dermatology,Follow-up,Cancelled,,Yes,650
+APT0092,2026-01-19,General Medicine,Follow-up,Attended,,Yes,400
+APT0093,2026-02-27,ENT,New,Attended,12.0,Yes,650
+APT0094,2026-02-13,General Medicine,New,Attended,36.0,No,400
+APT0095,2026-01-20,Cardiology,Follow-up,Cancelled,,Yes,1000
+APT0096,2026-01-26,Orthopedics,Follow-up,Attended,37.0,Yes,700
+APT0097,2026-01-25,General Medicine,Follow-up,Cancelled,,Yes,550
+APT0098,2026-01-06,General Medicine,Follow-up,Attended,30.0,Yes,500
+APT0099,2026-01-17,Cardiology,New,No-show,,Yes,950
+APT0099,2026-02-14,General Medicine,New,No-show,,Yes,400
